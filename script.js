@@ -1,13 +1,14 @@
 /* PostCraft AI — standalone vanilla JS version.
- * Talks to the existing FastAPI backend. The AI key never leaves the backend.
+ * Talks to this site's own /api backend (Netlify Server in netlify/server/).
+ * The AI runs server-side through Netlify AI Gateway; no key reaches the browser.
  *
  * BACKEND ADDRESS
  * ---------------
- * Default is your published app. You can override it without editing this file:
+ * Default is the same-origin /api. You can override it without editing this file:
  *   - open index.html?api=https://your-backend-host/api   (remembered in this browser)
  *   - open index.html?api=reset                            (back to the default)
  */
-const DEFAULT_API_BASE = "https://postcraft-ai-22.emergent.host/api";
+const DEFAULT_API_BASE = "/api";
 const API_STORAGE_KEY = "postcraft-api-base";
 const SESSION_KEY = "postcraft-anonymous-session";
 
