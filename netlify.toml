@@ -1,0 +1,18 @@
+[build]
+  # The deployable app is the Vite + React frontend in frontend/ (Yarn, yarn.lock).
+  base = "frontend"
+  # Install from the lockfile first so the build works even when the deploy
+  # environment doesn't run its own dependency install step.
+  command = "yarn install --frozen-lockfile && yarn build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 8 requires Node 20.19+ / 22.12+.
+  NODE_VERSION = "22"
+
+# Single-page app: React Router handles every path client-side, so serve
+# index.html for deep links instead of a 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

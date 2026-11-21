@@ -1,0 +1,111 @@
+{
+  "project_name": "PostCraft AI",
+  "archetype": "THE PERFORMANCE PRO / MODERN SAAS (Clean, Vibrant & High-Contrast Precision)",
+  "design_philosophy": "Fusion over Imitation. Emotion First. Content is King. Hybrid split workspace with live LinkedIn feed simulation, high-density actionable tools, subtle ambient mesh gradients, and pixel-perfect interactive feedback.",
+  "user_choices": {
+    "llm_model": "Google Gemini 3 Flash (Modular Integration)",
+    "design_theme": "Premium Modern SaaS with clean white background, soft subtle violet-blue ambient gradients (#FAF8FF to #F4F7FF), crisp border outlines, and rich contrast elements",
+    "typography_style": "Clean, authoritative Sans paired with high-impact Display headings",
+    "workspace_layout": "Dedicated Dual-Pane Generator & Live LinkedIn Feed Preview Editor with Dashboard Management & Drafts Kanban/List",
+    "data_persistence": "MongoDB backed with anonymous-session fallback via localStorage/session tokens"
+  },
+  "typography": {
+    "font_family_heading": "'Plus Jakarta Sans', 'Outfit', sans-serif",
+    "font_family_body": "'Inter', 'DM Sans', sans-serif",
+    "font_family_mono": "'JetBrains Mono', monospace",
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900",
+      "h3_card": "text-lg sm:text-xl font-semibold tracking-normal text-slate-900",
+      "body_main": "text-base font-normal leading-relaxed text-slate-600",
+      "body_small": "text-sm font-medium text-slate-500",
+      "label_accent": "text-xs font-semibold uppercase tracking-[0.15em] text-indigo-600"
+    }
+  },
+  "colors": {
+    "base_bg": "#FFFFFF",
+    "page_background_gradient": "bg-gradient-to-br from-slate-50 via-indigo-[10]/20 to-blue-[10]/20",
+    "brand_primary": "#6366F1",
+    "brand_primary_hover": "#4F46E5",
+    "brand_secondary": "#2563EB",
+    "brand_accent": "#8B5CF6",
+    "surface": {
+      "card": "#FFFFFF",
+      "card_border": "#E2E8F0",
+      "card_hover_border": "#C7D2FE",
+      "linkedin_feed": "#F8FAFC",
+      "sidebar": "#FAFAFD"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#64748B",
+      "accent": "#4F46E5"
+    },
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  "visual_enhancers": {
+    "gradient_mesh_hero": "bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/60 via-purple-50/40 to-white",
+    "glassmorphism": "backdrop-blur-xl bg-white/80 border border-white/40 shadow-sm",
+    "card_shadow": "shadow-[0_4px_20px_-4px_rgba(99,102,241,0.08)]",
+    "active_ring": "ring-2 ring-indigo-500/20 ring-offset-2",
+    "badge_style": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-200/60"
+  },
+  "key_components": {
+    "navigation_header": {
+      "component": "NavBar",
+      "description": "Sticky top bar with blurred white background, PostCraft AI logo with violet icon badge, active route navigation, quick action ('New Post'), session draft count badge, and setting trigger.",
+      "data_testid": "main-navbar"
+    },
+    "hero_banner": {
+      "component": "HeroHeader",
+      "description": "Compact high-converting header showcasing platform value proposition, AI badge, model selector (Gemini 3 Flash), and quick start templates.",
+      "data_testid": "hero-section"
+    },
+    "generator_panel": {
+      "component": "PostGeneratorForm",
+      "description": "Form with Topic/Idea input textarea, Category selector (Personal Branding, Career Updates, Educational, Storytelling, Tech, Business, Project Showcase, Motivation), Tone, Length, Language (English, Hindi, Hinglish), Target Audience, Keywords, and CTA fields.",
+      "data_testid": "post-generator-form"
+    },
+    "editor_preview_workspace": {
+      "component": "EditorAndPreviewWorkspace",
+      "description": "Split tab or side-by-side workspace: Left pane features direct rich draft editor & AI toolbar (Regenerate, Rewrite, Shorten, Expand, Improve Hook, Fix Grammar, Add Hashtags, Quality Audit); Right pane features realistic LinkedIn Feed simulator complete with creator profile header, 'see more' cutoff line, reaction count mock, copy/download actions.",
+      "data_testid": "editor-preview-workspace"
+    },
+    "ai_quick_tools": {
+      "component": "AIToolbar",
+      "description": "Action bar with instant refinement buttons: 'Fix Grammar', 'Viral Hook', 'Shorten', 'Expand', 'Generate Hashtags', 'Quality Score Audit'.",
+      "data_testid": "ai-toolbar"
+    },
+    "drafts_dashboard": {
+      "component": "DraftsDashboard",
+      "description": "Searchable, filterable list/grid of saved drafts with category tags, engagement preview score, session indicator, edit, duplicate, and delete controls.",
+      "data_testid": "drafts-dashboard"
+    }
+  },
+  "image_urls": [
+    {
+      "category": "creator_avatar",
+      "url": "https://images.unsplash.com/photo-1785595440403-0daffbad47d2?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Creator desk and laptop workspace setup"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Build a complete React + Tailwind JS app for PostCraft AI with full AI generation capabilities.",
+    "Support Google Gemini 3 Flash via backend API endpoint, with fallback to mock structured responses if backend API key is unset.",
+    "Ensure all major interactive elements have data-testid attributes (e.g., data-testid='generate-post-button', data-testid='post-topic-input', data-testid='post-editor-textarea', data-testid='copy-post-button', data-testid='save-draft-button').",
+    "Include a quality/readability audit widget showing PostCraft Hook Score, Readability Rating, and Scannability Index.",
+    "Persist user drafts in MongoDB via backend API, fallback to localStorage if network or session requires."
+  ],
+  "accessibility_and_ux_rules": [
+    "Ensure minimum 4.5:1 contrast ratio for standard body text.",
+    "Provide explicit hover and focus states with dark text on light backgrounds and ring outlines.",
+    "Add toast notifications (using sonner) for action confirmations (e.g. 'Post copied to clipboard!', 'Draft saved successfully').",
+    "Support responsive mobile views with tab toggles between 'Form', 'Editor', and 'LinkedIn Preview'."
+  ]
+}
